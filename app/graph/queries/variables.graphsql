@@ -1,0 +1,18 @@
+query HeroAndItems($heroId: ID!, $itemSlot: Int!){
+  hero(id: $heroId) {
+    name
+    attribute
+    items{
+      name
+    }
+    item(slot:$itemSlot) {
+      name
+      cost
+    }
+  }
+}
+
+{
+  "heroId": "2",
+  "itemSlot": 3
+}

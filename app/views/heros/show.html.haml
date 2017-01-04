@@ -1,0 +1,33 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @hero.name
+%p
+  %b Main attr:
+  = @hero.main_attr
+%p
+  %b Skill1:
+  = @hero.skill1
+%p
+  %b Skill2:
+  = @hero.skill2
+%p
+  %b Skill3:
+  = @hero.skill3
+%p
+  %b Skill4:
+  = @hero.skill4
+%p
+  %b Str:
+  = @hero.str
+%p
+  %b Agi:
+  = @hero.agi
+%p
+  %b Int:
+  = @hero.int
+
+= link_to 'Edit', edit_hero_path(@hero)
+\|
+= link_to 'Back', heros_path

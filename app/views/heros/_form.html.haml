@@ -1,0 +1,37 @@
+= form_for @hero do |f|
+  - if @hero.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@hero.errors.count, "error")} prohibited this hero from being saved:"
+      %ul
+        - @hero.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :main_attr
+    = f.text_field :main_attr
+  .field
+    = f.label :skill1
+    = f.text_field :skill1
+  .field
+    = f.label :skill2
+    = f.text_field :skill2
+  .field
+    = f.label :skill3
+    = f.text_field :skill3
+  .field
+    = f.label :skill4
+    = f.text_field :skill4
+  .field
+    = f.label :str
+    = f.number_field :str
+  .field
+    = f.label :agi
+    = f.number_field :agi
+  .field
+    = f.label :int
+    = f.number_field :int
+  .actions
+    = f.submit 'Save'

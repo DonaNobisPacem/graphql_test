@@ -1,0 +1,19 @@
+query HeroAndItems($heroId: ID!, $itemSlot: Int!, $withItems: Boolean!){
+  hero(id: $heroId) {
+    name
+    attribute
+    items @include( if: $withItems ) {
+      name
+    }
+    item(slot:$itemSlot) {
+      name
+      cost
+    }
+  }
+}
+
+{
+  "heroId": "2",
+  "withItems": true,
+  "itemSlot": 3
+}

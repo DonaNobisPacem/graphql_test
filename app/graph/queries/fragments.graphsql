@@ -1,0 +1,17 @@
+query {
+  comparisonHero1:hero(id: 10){
+    ...comparisonFields
+  }
+  
+  comparisonHero2:hero(id: 20){
+    ...comparisonFields
+  }
+}
+
+fragment comparisonFields on Hero {
+  name
+  attribute
+  str
+  agi
+  int
+}

@@ -1,0 +1,12 @@
+mutation ($heroName: String!, $heroAttribute:String!) {
+  createHero( input: { name: $heroName, attribute: $heroAttribute } ) {
+    hero{
+      name
+      attribute
+    }
+  }
+  
+  destroyHero(input: { id:1 }) {
+    status
+  }
+}

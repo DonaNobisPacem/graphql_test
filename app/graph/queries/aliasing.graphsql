@@ -1,0 +1,6 @@
+query {
+  aliasedHero: hero(id: 10) {
+    name
+    attribute
+  }
+}

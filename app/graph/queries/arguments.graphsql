@@ -1,0 +1,10 @@
+query {
+  hero(id: 1) {
+    name
+    attribute
+    item(slot: 1) {
+      name
+      cost
+    }
+  }
+}
