@@ -19,7 +19,7 @@ module HeroMutations
     resolve -> ( obj, inputs, ctx ) {
       hero = Hero.create(name: inputs[:name], main_attr: inputs[:attribute])
       { 
-        status: "Good",
+        status: "Hero has been created",
         hero: hero 
       }
     }
